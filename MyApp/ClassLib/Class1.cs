@@ -2,7 +2,8 @@
 
 namespace ClassLib
 {
-    public class Class1
+    public class Student
     {
+        
     }
 }
