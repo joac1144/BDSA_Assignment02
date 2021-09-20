@@ -20,17 +20,6 @@ namespace ClassLib.Tests
     
         }
         
-        public void Is_read_only(){
-            //Arrange
-            Student student = new Student(1, "Joachim", "Koefoed", new DateTime(2020, 09, 16), new DateTime(2021, 09, 16), new DateTime(2022, 09, 16));
-
-            //Act
-            string output = student.ToString();
-
-            //Assert
-            Assert.Equal("hejsaa sd ", output);
-        }
-        
         [Fact]
         public void ImmutableStudent_Equality_For_Records(){
             //Arrange
@@ -41,7 +30,7 @@ namespace ClassLib.Tests
             
 
             //Assert
-            Assert.Equal(true, immutableStudent == immutableStudent2);
+            Assert.True(immutableStudent == immutableStudent2);
         }
 
         [Fact]
@@ -54,7 +43,7 @@ namespace ClassLib.Tests
             
 
             //Assert
-            Assert.Equal(false, immutableStudent == immutableStudent2);
+            Assert.False(immutableStudent == immutableStudent2);
         }
 
         [Fact]
