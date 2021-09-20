@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace ClassLib
 {
-    public class Student
-    {
-        int id;
-        string GivenName;
-        string Surname;
+    public record ImmutableStudent{
+
+        public int id {get; init;}
+        public string GivenName {get; init;}
+        public string Surname {get; init;}
 
         public Status Status{
             get {
@@ -21,14 +21,13 @@ namespace ClassLib
                     return Status.Active;
                 }
             }
-
         }
 
-        DateTime StartDate;
-        DateTime EndDate;
-        DateTime GraduationDate;
+        public DateTime StartDate {get; init;}
+        public DateTime EndDate {get; init;}
+        public DateTime GraduationDate {get; init;}
 
-        public Student(int id, string GivenName, string Surname, DateTime StartDate, DateTime EndDate, DateTime GraduationDate){
+        public ImmutableStudent(int id, string GivenName, string Surname, DateTime StartDate, DateTime EndDate, DateTime GraduationDate){
             this.id = id;
             this.GivenName = GivenName;
             this.Surname = Surname;
@@ -40,20 +39,5 @@ namespace ClassLib
         public override string ToString(){
             return "Name: " + this.GivenName + " " + this.Surname + ". ID: " + this.id + ". StartDate: " + this.StartDate +". EndDate: " + this.EndDate + ". GraduationDate: " + this.GraduationDate + ". Status: " + this.Status; 
         }
-
-    }
-
-    public enum Status
-    {
-        New,
-        Active,
-        Dropout,
-        Graduated
     }
 }
-
-
-// Active = between startdate and 3 months after  
-// Active = between end/grad and start
-// Dropout = Enddate before grad date
-// Grad = Enddate = graduationdate 
