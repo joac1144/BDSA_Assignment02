@@ -37,7 +37,7 @@ namespace ClassLib
         }
 
         public override string ToString(){
-            return "Name: " + this.GivenName + " " + this.Surname + ". ID: " + this.id + ". StartDate: " + this.StartDate +". EndDate: " + this.EndDate + ". GraduationDate: " + this.GraduationDate + ". Status: " + this.Status; 
+            return "Name: " + this.GivenName + " " + this.Surname + ". ID: " + this.id + ". StartDate: " + this.StartDate.ToString("MM/dd/yyyy") +". EndDate: " + this.EndDate.ToString("MM/dd/yyyy") + ". GraduationDate: " + this.GraduationDate.ToString("MM/dd/yyyy") + ". Status: " + this.Status; 
         }
     }
 }
