@@ -11,7 +11,7 @@ namespace ClassLib
 
         public Status Status{
             get {
-                if(DateTime.Compare(StartDate, DateTime.Now) > 30){
+                if(DateTime.Compare(StartDate, DateTime.Now) < 30){
                     return Status.New;
                 }else if(EndDate < GraduationDate){
                     return Status.Dropout;
