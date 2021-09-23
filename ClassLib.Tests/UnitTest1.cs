@@ -16,7 +16,7 @@ namespace ClassLib.Tests
             var output = student.Status;
 
             //Assert
-            Assert.Equal(Status.Dropout, output);
+            Assert.Equal(Status.New, output);
     
         }
         
