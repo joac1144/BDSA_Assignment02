@@ -54,7 +54,7 @@ namespace ClassLib.Tests
 
             //Act
             string output = immutableStudent.ToString();
-            string expected = "Name: Joachim Koefoed. ID: 1. StartDate: 09-16-2020. EndDate: 09-16-2021. GraduationDate: 09-16-2022. Status: Dropout";
+            string expected = "Name: Joachim Koefoed. ID: 1. StartDate: 09/16/2020. EndDate: 09/16/2021. GraduationDate: 09/16/2022. Status: Dropout";
 
             //Assert
             Assert.Equal(expected, output);
